@@ -1,0 +1,10 @@
+/* Second motion layer: deliberately lightweight so the site stays fast on a phone. */
+.nav nav a.active{color:var(--acid)}
+.nav nav a.active:after{content:'';display:block;width:5px;height:5px;background:var(--acid);border-radius:50%;margin:6px auto -11px}
+#signal-field{position:absolute;z-index:1;inset:0;width:100%;height:100%;pointer-events:none;mask-image:linear-gradient(90deg,transparent 37%,#000 64%,transparent)}
+.hero-measure{position:absolute;z-index:2;right:4.5vw;top:16vh;display:grid;grid-template-columns:auto auto;gap:4px 20px;align-items:baseline}.hero-measure span{font:8px var(--mono);letter-spacing:.1em;color:var(--acid)}.hero-measure b{font:500 14px var(--display)}.hero-measure b span{font-size:8px;color:#c5cbc0;margin-left:4px}
+.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;color:#c9cec4;white-space:nowrap;font:9px var(--mono);letter-spacing:.17em}.ticker div{display:inline-block;animation:ticker 34s linear infinite}.ticker i{font-style:normal;color:var(--acid);padding:0 20px}@keyframes ticker{to{transform:translateX(-50%)}}
+.principles{padding:150px 5vw;background:#d7ff5a;color:#081007;display:grid;grid-template-columns:1fr 1fr;gap:12vw}.principles .overline{color:#385100}.principles h2{margin:0;font:600 clamp(3.5rem,7vw,7rem)/.92 var(--display);letter-spacing:-.08em}.principles h2 em{font-style:normal;color:#385100}.principle-list{border-top:1px solid rgba(5,8,7,.3)}.principle-list>div{display:grid;grid-template-columns:55px 1fr;gap:15px;padding:26px 0;border-bottom:1px solid rgba(5,8,7,.3)}.principle-list b{font:10px var(--mono)}.principle-list span{font:500 clamp(1rem,2vw,1.45rem)/1.25 var(--display);max-width:380px}
+.ready .hero-measure{transition-delay:.55s}
+@media(max-width:780px){.hero-measure{display:none}.ticker{font-size:8px}.principles{grid-template-columns:1fr;gap:45px;padding:100px 5vw}.nav nav a.active:after{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.ticker div{animation:none}}
